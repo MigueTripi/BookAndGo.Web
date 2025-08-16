@@ -1,4 +1,65 @@
-/* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+:root {
+  --color-primary: #1976d2;
+  --color-secondary: #ff9800;
+  --color-accent: #43a047;
+  --color-background: #f5f5f5;
+  --color-text: #222;
+}
+
+[data-theme="dark"] {
+  --color-primary: #90caf9;
+  --color-secondary: #ffb74d;
+  --color-accent: #66bb6a;
+  --color-background: #121212;
+  --color-text: #fafafa;
+}
+
+/* Layout general */
+html, body {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* Breakpoints estándar */
+@media (max-width: 599px) {
+  /* Mobile */
+  body {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1023px) {
+  /* Tablet */
+  body {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Desktop */
+  body {
+    font-size: 17px;
+  }
+}
+
+a {
+  color: var(--color-primary);
+}
+
+.button-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.button-secondary {
+  background: var(--color-secondary);
+  color: #fff;
+}
+
