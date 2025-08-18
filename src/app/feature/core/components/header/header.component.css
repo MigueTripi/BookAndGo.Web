@@ -1,0 +1,57 @@
+:host {
+  display: block;
+}
+
+.mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+.logo {
+  margin-right: 24px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.menu-items {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.menu-button {
+  display: none;
+}
+
+.active {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .menu-button {
+    display: block;
+  }
+
+  .menu-items {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: inherit;
+    flex-direction: column;
+    padding: 8px;
+    z-index: 1000;
+  }
+
+  .menu-items.mobile-menu {
+    display: flex;
+  }
+
+  .menu-items a, 
+  .menu-items button {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
