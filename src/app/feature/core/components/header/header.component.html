@@ -1,1 +1,36 @@
-<p>header works!</p>
+<mat-toolbar color="primary">
+  <button mat-icon-button class="menu-button" (click)="isMenuOpen.set(!isMenuOpen())" *ngIf="isMobile()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  
+  <span class="logo">BookAndGo</span>
+  
+  <div class="menu-items" [class.mobile-menu]="isMobile() && isMenuOpen()">
+    <a mat-button routerLink="/dashboard" routerLinkActive="active">
+      <mat-icon>dashboard</mat-icon>
+      Dashboard
+    </a>
+    
+    <a mat-button routerLink="/bookings" routerLinkActive="active">
+      <mat-icon>book_online</mat-icon>
+      Bookings
+    </a>
+    
+    <button mat-button [matMenuTriggerFor]="adminMenu">
+      <mat-icon>admin_panel_settings</mat-icon>
+      Admin
+      <mat-icon>arrow_drop_down</mat-icon>
+    </button>
+    
+    <mat-menu #adminMenu="matMenu">
+      <a mat-menu-item routerLink="/admin/services">
+        <mat-icon>room_service</mat-icon>
+        Services
+      </a>
+      <a mat-menu-item routerLink="/admin/times">
+        <mat-icon>schedule</mat-icon>
+        Times
+      </a>
+    </mat-menu>
+  </div>
+</mat-toolbar>

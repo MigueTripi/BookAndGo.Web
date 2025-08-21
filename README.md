@@ -2,6 +2,26 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.15.
 
+
+# Overview
+Angular project that will handle several features for booking a customer visit for several business.
+
+# Propose
+Provide a multitenant platform to subscribe several businesses, create the proper configuration and roolout to production environment quickly.
+
+
+# Business value
+Lets give the businesses a tool to rely the agenda and make easier the customer leads. 
+Receive the customers in an organized way for specific services. Help the businesses on demand flow to not be a problem.
+Also, improve the customer experience showing the companies more professional and organized
+
+
+## Thrid party dependencies
+
+This project has the following dependecies:
+Angular Material  ~19.2.19 
+
+
 ## Development server
 
 To start a local development server, run:
